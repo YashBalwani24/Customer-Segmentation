@@ -109,14 +109,14 @@ if st.button("🔍 Predict Cluster"):
         st.success(f"Customer belongs to Cluster {cluster}")
 
         # Cluster meaning
-        if cluster == 0:
-            st.info("💰 High spending customers")
+        if cluster == 3:
+            st.success("💰 High Value Customer")
         elif cluster == 1:
-            st.info("🛍️ Moderate customers")
+            st.success("📉 Low Value Customer")
+        elif cluster == 0:
+            st.success("🛍️ Medium Customer")
         elif cluster == 2:
-            st.info("📉 Low spending customers")
-        else:
-            st.info("🎯 Potential target customers")
+            st.success("🎯 Potential Customer")
 
     except Exception as e:
         st.error("❌ Error in prediction")
